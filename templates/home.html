@@ -7,6 +7,6 @@
     {% for post_id, post_view in posts.items() %}
     <li><a href="{{ url_for('post_view', post_id=post_id)}}">{{ post_view['title'] }}</a></li>
     {% endfor %}
-
 </ul>
+<a href="{{ url_for('create_post')}}">Create post</a>
 {% endblock %}
