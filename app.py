@@ -10,7 +10,9 @@ posts = {
     }
 }
 
-
+conn = sqlite3.connect('blogposts.db')
+conn.execute('CREATE TABLE posts (title TEXT, content TEXT)')
+conn.close()
 @app.route('/')
 def home():
     return render_template('home.html', posts=posts)
